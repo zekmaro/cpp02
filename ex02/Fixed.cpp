@@ -6,7 +6,7 @@
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/05 12:42:18 by anarama           #+#    #+#             */
-/*   Updated: 2024/10/06 17:19:25 by anarama          ###   ########.fr       */
+/*   Updated: 2024/10/07 16:27:27 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,45 @@ Fixed Fixed::operator/(const Fixed& other) const {
     return Fixed(this->toFloat() / other.toFloat());
 }
 
+Fixed Fixed::operator++( void ) {
+	Fixed temp = *this;
+	this->_integer++;
+	return temp;
+}
+
+Fixed Fixed::operator--( void ) {
+	Fixed temp = *this;
+	this->_integer--;
+	return temp;
+}
+
+Fixed& Fixed::operator++( int ) {
+	this->_integer++;
+	return *this;
+}
+
+Fixed& Fixed::operator--( int ) {
+	this->_integer--;
+	return *this;
+}
+
+Fixed& Fixed::min(Fixed& a, Fixed& b) {
+	if (a > b) return b;
+	else return a;
+}
+const Fixed& Fixed::min(const Fixed& a, const Fixed& b) {
+	if (a > b) return b;
+	else return a;
+}
+Fixed& Fixed::max(Fixed& a, Fixed& b) {
+	if (a > b) return a;
+	else return b;
+}
+
+const Fixed& Fixed::max(const Fixed& a, const Fixed& b) {
+	if (a > b) return a;
+	else return b;
+}
 
 std::ostream& operator<<(std::ostream& out, const Fixed& fixed) {
     out << fixed.toFloat();
