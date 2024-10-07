@@ -6,7 +6,7 @@
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/05 12:42:18 by anarama           #+#    #+#             */
-/*   Updated: 2024/10/07 18:39:11 by anarama          ###   ########.fr       */
+/*   Updated: 2024/10/07 16:27:27 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Fixed::Fixed( void ) : _integer(0) {
 
 Fixed::Fixed(const Fixed& other) {
     std::cout << "Copy constructor called" << std::endl;
-    _integer = other._integer;
+    _integer = other._integer;  // Copy the raw value
 }
 
 Fixed::Fixed( const int integer ) {
