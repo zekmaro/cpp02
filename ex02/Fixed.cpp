@@ -6,7 +6,7 @@
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/05 12:42:18 by anarama           #+#    #+#             */
-/*   Updated: 2024/10/07 18:39:11 by anarama          ###   ########.fr       */
+/*   Updated: 2024/10/08 11:59:57 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,24 +92,24 @@ Fixed Fixed::operator/(const Fixed& other) const {
     return Fixed(this->toFloat() / other.toFloat());
 }
 
-Fixed Fixed::operator++( void ) {
+Fixed Fixed::operator++( int ) {
 	Fixed temp = *this;
 	this->_integer++;
 	return temp;
 }
 
-Fixed Fixed::operator--( void ) {
+Fixed Fixed::operator--( int ) {
 	Fixed temp = *this;
 	this->_integer--;
 	return temp;
 }
 
-Fixed& Fixed::operator++( int ) {
+Fixed& Fixed::operator++( void ) {
 	this->_integer++;
 	return *this;
 }
 
-Fixed& Fixed::operator--( int ) {
+Fixed& Fixed::operator--( void ) {
 	this->_integer--;
 	return *this;
 }
