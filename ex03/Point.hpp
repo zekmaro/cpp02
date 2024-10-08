@@ -6,7 +6,7 @@
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 18:22:27 by anarama           #+#    #+#             */
-/*   Updated: 2024/10/07 19:02:30 by anarama          ###   ########.fr       */
+/*   Updated: 2024/10/08 11:13:35 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,7 @@ class Point {
 		const Fixed& getX( void ) const;
 		const Fixed& getY( void ) const;
 };
+
+bool bsp(const Point v1, const Point v2, const Point v3, const Point testPoint);
 
 #endif // POINT_HPP

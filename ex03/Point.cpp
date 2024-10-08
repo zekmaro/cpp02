@@ -6,7 +6,7 @@
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 18:34:09 by anarama           #+#    #+#             */
-/*   Updated: 2024/10/07 19:02:51 by anarama          ###   ########.fr       */
+/*   Updated: 2024/10/08 11:14:40 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ Point::Point ( const Point& other) : _x(other.getX()), _y(other.getY()) {
 }
 
 Point& Point::operator=( const Point& other) {
+	(void)other;
 	return *this;
 }
 
